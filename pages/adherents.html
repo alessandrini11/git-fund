@@ -4,74 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/tailwindcss.css">
+    <link rel="stylesheet" href="../assets/app.css">
     <title>git fund | adherents</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="">GIT FUND</a>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="depots.html">Dépots</a></li>
-                <li><a href="retrait.html">Retraits</a></li>
-                <li><a href="adherents.html">Adhérents</a></li>
-            </ul>
-            <div class="">
-                <i>btn</i>
+    <header class="bg-red-500 ">
+        <nav class="w-11/12 mx-auto">
+            <div class=" flex justify-between items-center h-12">
+                <a href="" class="text-2xl font-bold text-white">GIT FUND</a>
+                <ul class="hidden ">
+                    <li><a href="../pages/home.html">Home</a></li>
+                    <li><a href="../pages/depots.html">Dépots</a></li>
+                    <li><a href="/pages/retrait.html">Retraits</a></li>
+                    <li><a href="../pages/adherents.html">Adhérents</a></li>
+                </ul>
+                <div class="">
+                    <i class="fa fa-power-off text-white" aria-hidden="true"></i>
+                    <div class=" ">
+                        <ul class="hidden">
+                            <li>
+                                <a href="">Profile</a>
+                            </li>
+                            <li>
+                                <a href="">Deconnexion</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            <ul class="flex text-white justify-between pb-3">
+                <li><a href="../pages/home.html">Home</a></li>
+                <li><a href="../pages/depots.html">Dépots</a></li>
+                <li><a href="/pages/retrait.html">Retraits</a></li>
+                <li><a href="../pages/adherents.html">Adhérents</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
-        <h1>Les adhérents</h1>
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Sexe</th>
-                        <th>Filère</th>
-                        <th>Total cotisé</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Schuame</td>
-                        <td>Alexandre Lionel</td>
-                        <td>masculin</td>
-                        <td>GL</td>
-                        <td>5000</td>
-                    </tr>
-                    <tr>
-                        <td>Schuame</td>
-                        <td>Alexandre Lionel</td>
-                        <td>masculin</td>
-                        <td>GL</td>
-                        <td>5000</td>
-                    </tr>
-                    <tr>
-                        <td>Schuame</td>
-                        <td>Alexandre Lionel</td>
-                        <td>masculin</td>
-                        <td>GL</td>
-                        <td>5000</td>
-                    </tr>
-                    <tr>
-                        <td>Schuame</td>
-                        <td>Alexandre Lionel</td>
-                        <td>masculin</td>
-                        <td>GL</td>
-                        <td>5000</td>
-                    </tr>
-                    <tr>
-                        <td>Schuame</td>
-                        <td>Alexandre Lionel</td>
-                        <td>masculin</td>
-                        <td>GL</td>
-                        <td>5000</td>
-                    </tr>
-                </tbody>
-            </table>
+    <main class="my-5">
+        <div class="w-11/12 mx-auto">
+            <h1 class="text-3xl my-2">Les Adhérents</h1>
+            <div>
+                <table class="w-full text-center">
+                    <thead class="bg-black text-white">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Sexe</th>
+                            <th>Filère</th>
+                            <th>Total cotisé</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-gray-100">
+                            <td>Yasser</td>
+                            <td>Arafad Boubakari</td>
+                            <td>masculin</td>
+                            <td>GL</td>
+                            <td>5000</td>
+                        </tr>
+                        <tr>
+                            <td>Schuame</td>
+                            <td>Alexandre Lionel</td>
+                            <td>masculin</td>
+                            <td>GRT</td>
+                            <td>5000</td>
+                        </tr>
+                        <tr class="bg-gray-100">
+                            <td>Schuame</td>
+                            <td>Alexandre Lionel</td>
+                            <td>masculin</td>
+                            <td>GL</td>
+                            <td>5000</td>
+                        </tr>
+                        <tr>
+                            <td>Tomedi</td>
+                            <td>Suzane</td>
+                            <td>feminin</td>
+                            <td>GL</td>
+                            <td>5000</td>
+                        </tr>
+                        <tr class="bg-gray-100">
+                            <td>Schuame</td>
+                            <td>Alexandre Lionel</td>
+                            <td>masculin</td>
+                            <td>GRT</td>
+                            <td>5000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </main>
 </body>
