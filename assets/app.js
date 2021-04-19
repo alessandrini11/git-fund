@@ -1,7 +1,7 @@
 window.addEventListener("load",() =>{
     
     let counters = document.querySelectorAll(".counter");
-    let speed = 300;
+    let speed = 200;
     
 
     counters.forEach(counter => {

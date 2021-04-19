@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../../assets/tailwindcss.css">
+    <link rel="stylesheet" href="../../../assets/app.css">
+    <title>dashboard | depots </title>
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-indigo-900 ">
+        <nav class="w-11/12 mx-auto">
+            <div class=" flex justify-between items-center h-12">
+                <a href="" class="text-2xl font-bold text-white">GIT FUND</a>
+                <ul class="hidden ">
+                    <li><a href="../pages/dashboard.html">Dashboard</a></li>
+                    <li><a href="../pages/depots.html">Dépots</a></li>
+                    <li><a href="/pages/retrait.html">Retraits</a></li>
+                    <li><a href="../pages/adherents.html">Adhérents</a></li>
+                </ul>
+                <div class="">
+                    <a href="../home.html" class="text-white">Home</a>
+                    <i class="fa fa-power-off text-white" aria-hidden="true"></i>
+                    <div class=" ">
+                        <ul class="hidden">
+                            <li>
+                                <a href="">Profile</a>
+                            </li>
+                            <li>
+                                <a href="">Deconnexion</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="flex text-white justify-between pb-3">
+                <li><a href="../dashboard.html">Dashboard</a></li>
+                <li><a href="../depots.html">Dépots</a></li>
+                <li><a href="../retrait.html">Retraits</a></li>
+                <li><a href="../adherents.html">Adhérents</a></li>
+                <li><a href="../profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="w-11/12 mx-auto">
+        <section class="flex justify-center items-center py-16">
+            <div class="w-9/12">
+                <h2 class="text-2xl text-center">Inscrivez un membre</h2>
+                <form class="my-5 " action="">
+                    <div class="mb-4 flex flex-col ">
+                        <label for="nom">Nom</label>
+                        <input class="border px-3" id="nom" type="text">
+                    </div>
+                    <div class="my-4 flex flex-col ">
+                        <label for="prenom">Prenom</label>
+                        <input class="border px-3" id="prenom" type="text">
+                    </div>
+                    <div class="flex justify-between my-4">
+                        <div class=" flex flex-col ">
+                            <label for="filiere">Filière</label>
+                            <select class="border px-3" name="filiere" id="">
+                                <option value="">GL</option>
+                                <option value="">GRT</option>
+                            </select>
+                        </div>
+                        <div class=" flex flex-col ">
+                            <label for="sexe">Sexe</label>
+                            <select class="px-3 border" name="sexe" id="">
+                                <option value="">masculin</option>
+                                <option value="">feminin</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex justify-between my-4">
+                        <div class=" flex flex-col ">
+                            <label for="poste">Poste</label>
+                            <select class="border px-2" name="poste" id="">
+                                <option value="">président</option>
+                                <option value="">trésorier</option>
+                                <option value="">censeur</option>
+                            </select>
+                        </div>
+                        <div class=" flex flex-col ">
+                            <label for="role">Role</label>
+                            <select class="px-2 border" name="role" id="">
+                                <option value="">visiteur</option>
+                                <option value="">admin</option>
+                                <option value="">super admin</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="my-4 flex flex-col ">
+                        <label for="matricule">Matricule</label>
+                        <input class="border px-3" id="matricule" type="text">
+                    </div>
+                    <div class="my-4 flex flex-col ">
+                        <label for="mdp">Mot de passe</label>
+                        <input class="border px-3" id="mdp" type="password">
+                    </div>
+                    <div class="">
+                        <button class="bg-green-600 text-white py-1 px-3 w-full " type="submit">Inscrire</button>
+                    </div>
+                </form>
+                <p><a href="../adherents.html" class="text-blue-500 underline">retour a la liste</a></p>
+            </div>
+        </section>
+    </div>
+    <footer class="bg-black">
+        <div class="w-11/12 mx-auto h-32 text-white flex justify-center items-center">
+            <div class="">
+                <p>Copyright &copy; 2021 GIT FUND </p>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+</body>
+
+</html>
