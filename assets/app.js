@@ -1,7 +1,8 @@
 window.addEventListener("load",() =>{
     let mensuel = document.getElementById("mensuel").getContext("2d");
     let adherents = document.getElementById("adherents").getContext("2d");
-
+    let counters = document.querySelectorAll(".counter");
+    let speed = 300;
     let dataAdherent = new Chart(adherents,{
         type:'doughnut',
         data:{
@@ -25,7 +26,7 @@ window.addEventListener("load",() =>{
                 max:1000000
             }
         }
-    })
+    });
 
     let data = new Chart(mensuel,{
         type:'line',
@@ -49,5 +50,25 @@ window.addEventListener("load",() =>{
                 max:1000000
             }
         }
-    })
+    });
+
+    counters.forEach(counter => {
+        const updateCount = () =>{
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+
+            
+            const inc = target/speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount,1)
+            } else {
+                count.innerText = target;
+            }
+
+
+        }
+        updateCount();
+    });
 })
