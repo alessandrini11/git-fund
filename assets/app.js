@@ -2,6 +2,8 @@ window.addEventListener("load",() =>{
     
     let counters = document.querySelectorAll(".counter");
     let speed = 200;
+    const menu = document.querySelector("#menu");
+    const dropDown = document.querySelector("#dropdown");
     
 
     counters.forEach(counter => {
@@ -23,4 +25,9 @@ window.addEventListener("load",() =>{
         }
         updateCount();
     });
+
+    function toggleMenu() {
+        dropDown.classList.toggle("md:block")
+    }
+    menu.addEventListener("click",toggleMenu)
 })

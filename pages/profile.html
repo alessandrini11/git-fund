@@ -12,21 +12,25 @@
 </head>
 <body class="bg-gray-100">
     <header class="bg-indigo-900">
-        <nav class="w-11/12 mx-auto">
+        <nav class="w-11/12 mx-auto md:max-w-4xl">
             <div class=" flex justify-between items-center h-12">
                 <a href="" class="text-2xl font-bold text-white">GIT FUND</a>
-                <ul class="hidden ">
+                <ul class="hidden justify-between text-white w-1/3 md:flex">
                     <li><a href="../pages/home.html">Home</a></li>
                     <li><a href="../pages/depots.html">Dépots</a></li>
                     <li><a href="/pages/retrait.html">Retraits</a></li>
                     <li><a href="../pages/adherents.html">Adhérents</a></li>
                 </ul>
-                <div class="">
-                    <i class="fa fa-power-off text-white" aria-hidden="true"></i>
-                    <div class=" ">
-                        <ul class="hidden">
-                            <li>
-                                <a href="">Profile</a>
+                <div class="relative">
+                    <div class="text-white">
+                        <a href="dashboard/dashboard.html" class="md:hidden  mr-10">Dashboard</a>
+                        <i class="fa fa-power-off md:hidden" aria-hidden="true"></i>
+                        <button class="hidden md:block" id="menu"><i class="fa fa-chevron-down text-2xl"></i></button>
+                    </div>
+                    <div id="dropdown" class=" bg-indigo-900 text-white p-1 hidden absolute -left-14 top-12 ">
+                        <ul class="p-1">
+                            <li class="mb-1">
+                                <a href="profile.html">Profile</a>
                             </li>
                             <li>
                                 <a href="">Deconnexion</a>
@@ -35,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            <ul class="flex text-white justify-between pb-3">
+            <ul class="flex text-white justify-between pb-3 hidden">
                 <li><a href="../pages/home.html">Home</a></li>
                 <li><a href="../pages/depots.html">Dépots</a></li>
                 <li><a href="/pages/retrait.html">Retraits</a></li>
@@ -44,17 +48,18 @@
             </ul>
         </nav>
     </header>
-    <main class="">
+    <main class="md:max-w-4xl mx-auto">
             <div class="flex">
                 <section class="h-screen w-1/3">
                     <div class="w-11/12 mx-auto text-center">
                         <div class="mt-5">
-                            <div style="padding-bottom: 100%;" class="relative h-0">
+                            <div style="padding-bottom: 100%;" class="mb-5 relative h-0">
                                 <img class="absolute inset-0 h-full w-full object-cover rounded-full" src="https://images.pexels.com/photos/4565508/pexels-photo-4565508.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
                             </div>
                             <p>Schuame Alexandre Lionel</p>
                             <p>Masculin</p>
                             <p>GL</p>
+                            <p>20G00624</p>
                             <p>Président</p>
                         </div>
                         
@@ -63,16 +68,16 @@
                 <section class="flex-1">
                     <div class="w-11/12 mx-auto">
                         <div class="my-5">
-                            <div class="flex flex-wrap content-between w-2/4 h-20 flex-grow p-2 bg-green-500 text-white">
+                            <div class="flex flex-col content-center w-2/4 h-20 p-2 bg-green-500 text-white shadow">
                                 <p>Dépots <i class="fa fa-plus"></i></p>
-                                <p class="ml-auto">50.000 XAF</p>
+                                <p class="mt-auto ml-auto">50.000 XAF</p>
                             </div>
                         </div>
                         <div class="">
                             <table class="w-full text-center bg-white">
                                 <thead class="bg-black text-white">
                                     <tr>
-                                        <th>somme</th>
+                                        <th>Somme</th>
                                         <th>Date</th>
                                     </tr>
                                 </thead>
@@ -112,5 +117,6 @@
             </div>
         </div>
     </footer>
+    <script src="../assets/app.js"></script>
 </body>
 </html>
