@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../assets/tailwindcss.css">
+    <title>dashboard | home </title>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-red-500 ">
+        <nav class="w-11/12 mx-auto">
+            <div class=" flex justify-between items-center h-12">
+                <a href="" class="text-2xl font-bold text-white">GIT FUND</a>
+                <ul class="hidden ">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="depots.html">Dépots</a></li>
+                    <li><a href="retrait.html">Retraits</a></li>
+                    <li><a href="adherents.html">Adhérents</a></li>
+                </ul>
+                <div class="">
+                    <a href="../home.html" class="text-white">Home</a>
+                    <i class="fa fa-power-off text-white" aria-hidden="true"></i>
+                    <div class=" ">
+                        <ul class="hidden">
+                            <li>
+                                <a href="">Profile</a>
+                            </li>
+                            <li>
+                                <a href="">Deconnexion</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="flex text-white justify-between pb-3">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="depots.html">Dépots</a></li>
+                <li><a href="retrait.html">Retraits</a></li>
+                <li><a href="adherents.html">Adhérents</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="w-11/12 mx-auto">
+            <section class="my-8">
+                <div class="grid grid-cols-2 gap-2 text-white">
+                    <div class="flex flex-col content-center h-20 flex-grow p-2  border shadow bg-white bg-purple-500">
+                        <p class="">Dépots <i class="fa fa-plus"></i></p>
+                        <p class="mt-auto text-right">50.000 XAF</p>
+                    </div>
+                    <div class="flex flex-col content-center h-20 flex-grow p-2 border shadow bg-white bg-pink-500">
+                        <p class="">Retrait <i class="fa fa-minus-circle"></i></p>
+                        <p class="mt-auto text-right">15.000 XAF</p>
+                    </div>
+                    <div class="flex flex-col content-center h-20 p-2 border shadow bg-white bg-green-500">
+                        <p class="">Solde <i class="fa fa-money"></i></p>
+                        <p class="mt-auto text-right">35.000 XAF</p>
+                    </div>
+                    <div class="flex flex-col content-center h-20 p-2 border shadow bg-white bg-blue-500">
+                        <p class="">Adhérents <i class="fa fa-user"></i></p>
+                        <p class="mt-auto text-right">23</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="">
+                    <div class="bg-white">
+                        <canvas id="mensuel" height="300"></canvas>
+                    </div>
+                    <div class="bg-white my-5 py-2">
+                        <canvas id="adherents" height="300"></canvas>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.min.js"
+        integrity="sha512-RGbSeD/jDcZBWNsI1VCvdjcDULuSfWTtIva2ek5FtteXeSjLfXac4kqkDRHVGf1TwsXCAqPTF7/EYITD0/CTqw=="
+        crossorigin="anonymous"></script>
+    <script src="../../assets/app.js"></script>
+</body>
+</html>

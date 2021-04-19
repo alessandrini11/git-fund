@@ -8,24 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
-    <link rel="stylesheet" href="../assets/tailwindcss.css">
-    <link rel="stylesheet" href="../assets/app.css">
-    <title>git fund | depots</title>
+    <link rel="stylesheet" href="../../assets/tailwindcss.css">
+    <link rel="stylesheet" href="../../assets/app.css">
+    <title>dashboard | depots </title>
 </head>
 
-<body>
+<body class="bg-gray-100">
     <header class="bg-red-500 ">
         <nav class="w-11/12 mx-auto">
             <div class=" flex justify-between items-center h-12">
                 <a href="" class="text-2xl font-bold text-white">GIT FUND</a>
                 <ul class="hidden ">
-                    <li><a href="../pages/home.html">Home</a></li>
+                    <li><a href="../pages/dashboard.html">Dashboard</a></li>
                     <li><a href="../pages/depots.html">Dépots</a></li>
                     <li><a href="/pages/retrait.html">Retraits</a></li>
                     <li><a href="../pages/adherents.html">Adhérents</a></li>
                 </ul>
                 <div class="">
-                    <a href="">Dashboard</a>
+                    <a href="../home.html" class="text-white">Home</a>
                     <i class="fa fa-power-off text-white" aria-hidden="true"></i>
                     <div class=" ">
                         <ul class="hidden">
@@ -40,10 +40,10 @@
                 </div>
             </div>
             <ul class="flex text-white justify-between pb-3">
-                <li><a href="../pages/home.html">Home</a></li>
-                <li><a href="../pages/depots.html">Dépots</a></li>
-                <li><a href="/pages/retrait.html">Retraits</a></li>
-                <li><a href="../pages/adherents.html">Adhérents</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="depots.html">Dépots</a></li>
+                <li><a href="retrait.html">Retraits</a></li>
+                <li><a href="adherents.html">Adhérents</a></li>
                 <li><a href="profile.html">Profile</a></li>
             </ul>
         </nav>
@@ -74,19 +74,21 @@
                                 <option value="">2022</option>
                                 <option value="">2023</option>
                             </select>
-                            <button type="submit" class="bg-purple-500 py-1 px-3 text-white"><i class="fa fa-search"></i></button>
+                            <button type="submit" class="bg-purple-500 py-1 px-3 text-white"><i
+                                    class="fa fa-search"></i></button>
                         </div>
                     </form>
                 </div>
                 <div class="mt-8">
                     <h1 class="text-3xl my-3">Tous les dépots</h1>
-                    <table class="p-10">
+                    <table class="p-10 w-full bg-white">
                         <thead class="bg-black text-white">
                             <tr>
                                 <th>Nom</th>
                                 <th>Prénom</th>
                                 <th>Somme</th>
                                 <th>Date</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -95,54 +97,104 @@
                                 <td>Alexandre lionel</td>
                                 <td>1000</td>
                                 <td>12 jan 2021</td>
+                                <td>
+                                    <div class="flex justify-between">
+                                        <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
+                                        <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Moumy Moumy</td>
                                 <td>Yves-Gaetan </td>
                                 <td>5000</td>
                                 <td>02 jan 2021</td>
+                                <td>
+                                    <div class="flex justify-between">
+                                        <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
+                                        <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
+                                    </div>
+                                </td>
                             </tr>
                             <tr class="bg-gray-100">
                                 <td>Hannah Hannah</td>
                                 <td>Esther</td>
                                 <td>2000</td>
                                 <td>28 dec 2020</td>
+                                <td>
+                                    <div class="flex justify-between">
+                                        <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
+                                        <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Hannah Hannah</td>
                                 <td>Esther</td>
                                 <td>2000</td>
                                 <td>28 dec 2020</td>
+                                <td>
+                                    <div class="flex justify-between">
+                                        <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
+                                        <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
+                                    </div>
+                                </td>
                             </tr>
                             <tr class="bg-gray-100">
                                 <td>Hannah Hannah</td>
                                 <td>Esther</td>
                                 <td>2000</td>
                                 <td>28 dec 2020</td>
+                                <td>
+                                    <div class="flex justify-between">
+                                        <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
+                                        <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Hannah Hannah</td>
                                 <td>Esther</td>
                                 <td>2000</td>
-                                <td>28 dec 2020</td>
+                                <td>28 dec 2020</td><td>
+                                    <div class="flex justify-between">
+                                        <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
+                                        <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
+                                    </div>
+                                </td>
                             </tr>
                             <tr class="bg-gray-100">
                                 <td>Hannah Hannah</td>
                                 <td>Esther</td>
                                 <td>2000</td>
-                                <td>28 dec 2020</td>
+                                <td>28 dec 2020</td><td>
+                                    <div class="flex justify-between">
+                                        <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
+                                        <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Hannah Hannah</td>
                                 <td>Esther</td>
                                 <td>2000</td>
-                                <td>28 dec 2020</td>
+                                <td>28 dec 2020</td><td>
+                                    <div class="flex justify-between">
+                                        <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
+                                        <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
+                                    </div>
+                                </td>
                             </tr>
                             <tr class="bg-gray-100">
                                 <td>Hannah Hannah</td>
                                 <td>Esther</td>
                                 <td>2000</td>
-                                <td>28 dec 2020</td>
+                                <td>28 dec 2020</td><td>
+                                    <div class="flex justify-between">
+                                        <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
+                                        <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -167,14 +219,15 @@
                 </div>
             </div>
         </section>
-    </div>
-    <footer class="bg-black">
-        <div class="w-11/12 mx-auto h-32 text-white flex justify-center items-center">
-            <div class="">
-                <p>Copyright &copy; 2021 GIT FUND </p>
-            </div>
         </div>
-    </footer>
+        <footer class="bg-black">
+            <div class="w-11/12 mx-auto h-32 text-white flex justify-center items-center">
+                <div class="">
+                    <p>Copyright &copy; 2021 GIT FUND </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
 </body>
-
 </html>
