@@ -4,6 +4,9 @@ window.addEventListener("load",() =>{
     let speed = 200;
     const menu = document.querySelector("#menu");
     const dropDown = document.querySelector("#dropdown");
+    const depotbtn = document.querySelector("#depotadd");
+    const modal = document.querySelector("#modal");
+    const closeModal = document.querySelector("#closemodal")
     
 
     counters.forEach(counter => {
@@ -25,9 +28,24 @@ window.addEventListener("load",() =>{
         }
         updateCount();
     });
-
+    function removeModal() {
+        if(modal.classList.contains("block")){
+            modal.classList.remove("block")
+            modal.classList.add("hidden")
+        }
+    }
     function toggleMenu() {
         dropDown.classList.toggle("md:block")
+        
     }
-    menu.addEventListener("click",toggleMenu)
+    function addModal(){
+        if(modal.classList.contains("hidden")){
+            modal.classList.remove("hidden")
+            modal.classList.add("block")
+        }
+    }
+    menu.addEventListener("click",toggleMenu);
+    depotbtn.addEventListener("click",addModal);
+    closeModal.addEventListener("click",removeModal)
+    modal.addEventListener("click",removeModal)
 })
