@@ -28,7 +28,8 @@ window.addEventListener("load",() =>{
         }
         updateCount();
     });
-    function removeModal() {
+    function removeModal(e) {
+        e.preventDefault()
         if(modal.classList.contains("block")){
             modal.classList.remove("block")
             modal.classList.add("hidden")
@@ -38,7 +39,8 @@ window.addEventListener("load",() =>{
         dropDown.classList.toggle("md:block")
         
     }
-    function addModal(){
+    function addModal(e){
+        e.preventDefault()
         if(modal.classList.contains("hidden")){
             modal.classList.remove("hidden")
             modal.classList.add("block")
