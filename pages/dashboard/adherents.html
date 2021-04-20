@@ -24,13 +24,16 @@
                     <li><a href="retrait.html">Retraits</a></li>
                     <li><a href="adherents.html">Adhérents</a></li>
                 </ul>
-                <div class="">
-                    <a href="../home.html" class="text-white">Home</a>
-                    <i class="fa fa-power-off text-white" aria-hidden="true"></i>
-                    <div class=" ">
-                        <ul class="hidden">
-                            <li>
-                                <a href="">Profile</a>
+                <div class="relative">
+                    <div class="text-white flex items-center">
+                        <a href="../home.html" class=" mr-10">Home</a>
+                        <i class="fa fa-power-off md:hidden" aria-hidden="true"></i>
+                        <button class="hidden md:block" id="menu"><i class="fa fa-chevron-down text-2xl"></i></button>
+                    </div>
+                    <div id="dropdown" class=" bg-indigo-900 text-white p-1 hidden absolute left-20 top-12 ">
+                        <ul class="p-1">
+                            <li class="mb-1">
+                                <a href="profile.html">Profile</a>
                             </li>
                             <li>
                                 <a href="">Deconnexion</a>
@@ -51,7 +54,8 @@
     <main class="my-5 ">
         <div class="w-11/12 mx-auto md:max-w-4xl">
             <h1 class="text-3xl my-2">Les Adhérents</h1>
-            <p class="mb-2 text-right"><a href="formulaires/adherents.html" class="text-white bg-blue-600 p-1"><i class="fa fa-plus"></i></a></p>
+            <p class="mb-2 text-right"><button id="depotadd" class="text-white bg-blue-600 p-1"><i
+                        class="fa fa-plus"></i></button></p>
 
             <div>
                 <table class="w-full text-center bg-white hidden md:table">
@@ -71,7 +75,7 @@
                             <td>président</td>
                             <td>5000</td>
                             <td>
-                                <div class="flex justify-around">
+                                <div class="flex justify-around py-1">
                                     <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
                                     <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
                                 </div>
@@ -83,10 +87,10 @@
                             <td>tresorier</td>
                             <td>5000</td>
                             <td>
-                                <div class="flex justify-around">
+                                <div class="flex justify-around py-1">
                                     <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
                                     <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
-                                 </div>
+                                </div>
                             </td>
                         </tr>
                         <tr class="bg-gray-100">
@@ -103,35 +107,35 @@
                         </tr>
                     </tbody>
                 </table>
-                
+
                 <table class="w-full bg-white md:hidden">
                     <tbody>
                         <tr class="bg-gray-100">
-                            <tr>
-                                <th>Nom</th>
-                                <td>Schuame</td>
-                            </tr>
-                            <tr>
-                                <th>Prenom</th>
-                                <td>Alexandre Lionel</td>
-                            </tr>
-                            <tr>
-                                <th>Poste</th>
-                                <td> Président</td>
-                            </tr>
-                            <tr>
-                                <th>Total cotisé</th>
-                                <td>5000 </td>
-                            </tr>
-                            <tr>
-                                <th>Action</th>
-                                <td>
-                                    <div class="">
-                                        <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
-                                        <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
-                                    </div>
-                                </td>
-                            </tr>
+                        <tr>
+                            <th>Nom</th>
+                            <td>Schuame</td>
+                        </tr>
+                        <tr>
+                            <th>Prenom</th>
+                            <td>Alexandre Lionel</td>
+                        </tr>
+                        <tr>
+                            <th>Poste</th>
+                            <td> Président</td>
+                        </tr>
+                        <tr>
+                            <th>Total cotisé</th>
+                            <td>5000 </td>
+                        </tr>
+                        <tr>
+                            <th>Action</th>
+                            <td>
+                                <div class="">
+                                    <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
+                                    <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
+                                </div>
+                            </td>
+                        </tr>
                         </tr>
                         <tr>
                         <tr class="bg-gray-100">
@@ -160,7 +164,7 @@
                             </td>
                         </tr>
                         </tr>
-                        
+
                         <tr>
                         <tr>
                             <th>Nom</th>
@@ -218,7 +222,74 @@
                     </tbody>
                 </table>
             </div>
-            
+            <div id="modal"
+                class="w-full h-full fixed left-0 top-0 flex justify-center items-center flex-col  transition-all duration-500 ease hidden">
+                <form class="my-5  w-9/12 bg-white p-3 md:w-max" action="">
+                    <p class="mb-2 text-right"><button id="closemodal"><i class="fas fa-times"></i></button></p>
+                    <h2 class="text-2xl text-center">Inscrivez un membre</h2>
+                    <div class="mb-4 flex flex-col ">
+                        <label for="nom">Nom</label>
+                        <input class="border border-2
+                        border-gray-500 px-3" id="nom" type="text">
+                    </div>
+                    <div class="my-4 flex flex-col ">
+                        <label for="prenom">Prenom</label>
+                        <input class="border border-2
+                        border-gray-500 px-3" id="prenom" type="text">
+                    </div>
+                    <div class="flex justify-between  my-4">
+                        <div class=" flex flex-col ">
+                            <label for="filiere">Filière</label>
+                            <select class="border border-2
+                            border-gray-500 px-3" name="filiere" id="filiere">
+                                <option value="">GL</option>
+                                <option value="">GRT</option>
+                            </select>
+                        </div>
+                        <div class=" flex flex-col ">
+                            <label for="sexe">Sexe</label>
+                            <select class="px-3 border border-2
+                            border-gray-500" name="sexe" id="sexe">
+                                <option value="">masculin</option>
+                                <option value="">feminin</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex justify-between my-4">
+                        <div class=" flex flex-col ">
+                            <label for="poste">Poste</label>
+                            <select class="border border-2
+                            border-gray-500 px-2" name="poste" id="poste">
+                                <option value="">président</option>
+                                <option value="">trésorier</option>
+                                <option value="">censeur</option>
+                            </select>
+                        </div>
+                        <div class=" flex flex-col ml-5">
+                            <label for="role">Role</label>
+                            <select class="px-2 border border-2
+                            border-gray-500" name="role" id="role">
+                                <option value="">visiteur</option>
+                                <option value="">admin</option>
+                                <option value="">super admin</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="my-4 flex flex-col ">
+                        <label for="matricule">Matricule</label>
+                        <input class="border border-2
+                        border-gray-500 px-3" id="matricule" type="text">
+                    </div>
+                    <div class="my-4 flex flex-col ">
+                        <label for="mdp">Mot de passe</label>
+                        <input class="border border-2
+                        border-gray-500 px-3" id="mdp" type="password">
+                    </div>
+                    <div class="">
+                        <button class="bg-green-600 text-white py-1 px-3 w-full " type="submit">Inscrire</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
     <footer class="bg-black">
@@ -228,6 +299,7 @@
             </div>
         </div>
     </footer>
+    <script src="../../assets/app.js"></script>
 </body>
 
 </html>

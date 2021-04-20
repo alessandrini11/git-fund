@@ -24,13 +24,16 @@
                     <li><a href="retrait.html">Retraits</a></li>
                     <li><a href="adherents.html">Adhérents</a></li>
                 </ul>
-                <div class="">
-                    <a href="../home.html" class="text-white"> Home</a>
-                    <i class="fa fa-power-off text-white" aria-hidden="true"></i>
-                    <div class=" ">
-                        <ul class="hidden">
-                            <li>
-                                <a href="">Profile</a>
+                <div class="relative">
+                    <div class="text-white flex items-center">
+                        <a href="../home.html" class=" mr-10">Home</a>
+                        <i class="fa fa-power-off md:hidden" aria-hidden="true"></i>
+                        <button class="hidden md:block" id="menu"><i class="fa fa-chevron-down text-2xl"></i></button>
+                    </div>
+                    <div id="dropdown" class=" bg-indigo-900 text-white p-1 hidden absolute left-20 top-12 ">
+                        <ul class="p-1">
+                            <li class="mb-1">
+                                <a href="profile.html">Profile</a>
                             </li>
                             <li>
                                 <a href="">Deconnexion</a>
@@ -54,7 +57,7 @@
                 <div class="">
                     <form action="">
                         <h2 class="text-xl my-3">Triez les dépots</h2>
-                        
+
                         <div class="">
                             <select class="border py-1 px-3" name="mois" id="mois">
                                 <option value="">janvier</option>
@@ -82,7 +85,8 @@
                 </div>
                 <div class="mt-8">
                     <h1 class="text-3xl my-3">Tous les retraits</h1>
-                    <p class="mb-2 text-right"><a href="formulaires/retraits.html" class="text-white bg-blue-600 p-1"><i class="fa fa-plus"></i></a></p>
+                    <p class="mb-2 text-right"><button id="depotadd" class="text-white bg-blue-600 p-1"><i
+                                class="fa fa-plus"></i></button></p>
                     <table class="w-full text-center bg-white">
                         <thead class="bg-black text-white">
                             <tr>
@@ -99,7 +103,8 @@
                                 <td>12 jan 2021</td>
                                 <td>
                                     <div class="flex justify-around md:justify-center">
-                                        <a href="" class="p-1 bg-green-600 text-white mr-5"><i class="fas fa-edit "></i></a>
+                                        <a href="" class="p-1 bg-green-600 text-white mr-5"><i
+                                                class="fas fa-edit "></i></a>
                                         <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
                                     </div>
                                 </td>
@@ -110,7 +115,8 @@
                                 <td>02 jan 2021</td>
                                 <td>
                                     <div class="flex justify-around md:justify-center">
-                                        <a href="" class="p-1 bg-green-600 text-white mr-5"><i class="fas fa-edit "></i></a>
+                                        <a href="" class="p-1 bg-green-600 text-white mr-5"><i
+                                                class="fas fa-edit "></i></a>
                                         <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
                                     </div>
                                 </td>
@@ -121,7 +127,8 @@
                                 <td>02 jan 2021</td>
                                 <td>
                                     <div class="flex justify-around md:justify-center">
-                                        <a href="" class="p-1 bg-green-600 text-white mr-5"><i class="fas fa-edit "></i></a>
+                                        <a href="" class="p-1 bg-green-600 text-white mr-5"><i
+                                                class="fas fa-edit "></i></a>
                                         <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
                                     </div>
                                 </td>
@@ -132,7 +139,8 @@
                                 <td>02 jan 2021</td>
                                 <td>
                                     <div class="flex justify-around md:justify-center">
-                                        <a href="" class="p-1 bg-green-600 text-white mr-5"><i class="fas fa-edit "></i></a>
+                                        <a href="" class="p-1 bg-green-600 text-white mr-5"><i
+                                                class="fas fa-edit "></i></a>
                                         <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
                                     </div>
                                 </td>
@@ -143,7 +151,8 @@
                                 <td>02 jan 2021</td>
                                 <td>
                                     <div class="flex justify-around md:justify-center">
-                                        <a href="" class="p-1 bg-green-600 text-white mr-5"><i class="fas fa-edit "></i></a>
+                                        <a href="" class="p-1 bg-green-600 text-white mr-5"><i
+                                                class="fas fa-edit "></i></a>
                                         <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
                                     </div>
                                 </td>
@@ -214,6 +223,25 @@
                 </div>
             </div>
         </section>
+        <div id="modal"
+            class="w-full h-full fixed left-0 top-0 flex justify-center items-center flex-col  transition-all duration-500 ease hidden">
+            <form class="my-5 w-9/12 bg-white p-3 md:w-max" action="">
+                <p class="mb-2 text-right"><button id="closemodal"><i class="fas fa-times"></i></button></p>
+                <h2 class="text-2xl text-center">Effectuer un retrait</h2>
+                <div class="mb-4 flex flex-col ">
+                    <label for="nom">Somme</label>
+                    <input class="border border-2 border-gray-500 px-3" id="nom" type="number">
+                </div>
+                <div class="my-4 flex flex-col ">
+                    <label for="prenom">Motif</label>
+                    <textarea class="border border-2 border-gray-500 px-3" name="motif" id="motif"></textarea>
+                </div>
+
+                <div class="">
+                    <button class="bg-green-600 text-white py-1 px-3 w-full " type="submit">Retirer</button>
+                </div>
+            </form>
+        </div>
     </div>
     <footer class="bg-black">
         <div class="w-11/12 mx-auto h-32 text-white flex justify-center items-center">
@@ -222,6 +250,7 @@
             </div>
         </div>
     </footer>
+    <script src="../../assets/app.js"></script>
 </body>
 
 </html>
