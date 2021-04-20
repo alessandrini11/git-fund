@@ -15,22 +15,25 @@
 
 <body class="bg-gray-100">
     <header class="bg-indigo-900">
-        <nav class="w-11/12 mx-auto">
+        <nav class="w-11/12 mx-auto md:max-w-4xl">
             <div class=" flex justify-between items-center h-12">
                 <a href="" class="text-2xl font-bold text-white">GIT FUND</a>
-                <ul class="hidden ">
-                    <li><a href="../pages/dashboard.html">Dashboard</a></li>
-                    <li><a href="../pages/depots.html">Dépots</a></li>
-                    <li><a href="/pages/retrait.html">Retraits</a></li>
-                    <li><a href="../pages/adherents.html">Adhérents</a></li>
+                <ul class="hidden justify-between text-white w-1/3 md:flex  ">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="depots.html">Dépots</a></li>
+                    <li><a href="retrait.html">Retraits</a></li>
+                    <li><a href="adherents.html">Adhérents</a></li>
                 </ul>
-                <div class="">
-                    <a href="../home.html" class="text-white">Home</a>
-                    <i class="fa fa-power-off text-white" aria-hidden="true"></i>
-                    <div class=" ">
-                        <ul class="hidden">
-                            <li>
-                                <a href="">Profile</a>
+                <div class="relative">
+                    <div class="text-white flex items-center">
+                        <a href="../home.html" class=" mr-10">Home</a>
+                        <i class="fa fa-power-off md:hidden" aria-hidden="true"></i>
+                        <button class="hidden md:block" id="menu"><i class="fa fa-chevron-down text-2xl"></i></button>
+                    </div>
+                    <div id="dropdown" class=" bg-indigo-900 text-white p-1 hidden absolute left-20 top-12 ">
+                        <ul class="p-1">
+                            <li class="mb-1">
+                                <a href="profile.html">Profile</a>
                             </li>
                             <li>
                                 <a href="">Deconnexion</a>
@@ -39,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <ul class="flex text-white justify-between pb-3">
+            <ul class="flex text-white justify-between pb-3 md:hidden">
                 <li><a href="dashboard.html">Dashboard</a></li>
                 <li><a href="depots.html">Dépots</a></li>
                 <li><a href="retrait.html">Retraits</a></li>
@@ -48,7 +51,7 @@
             </ul>
         </nav>
     </header>
-    <div class="w-11/12 mx-auto">
+    <div class="w-11/12 mx-auto md:max-w-4xl">
         <section>
             <div class="">
                 <div class="">
@@ -97,7 +100,7 @@
                                 <td>1000</td>
                                 <td>12 jan 2021</td>
                                 <td>
-                                    <div class="flex justify-between">
+                                    <div class="flex justify-between md:justify-around">
                                         <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
                                         <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
                                     </div>
@@ -108,7 +111,7 @@
                                 <td>5000</td>
                                 <td>02 jan 2021</td>
                                 <td>
-                                    <div class="flex justify-between">
+                                    <div class="flex justify-between md:justify-around">
                                         <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
                                         <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
                                     </div>
@@ -119,7 +122,7 @@
                                 <td>2000</td>
                                 <td>28 dec 2020</td>
                                 <td>
-                                    <div class="flex justify-between">
+                                    <div class="flex justify-between md:justify-around">
                                         <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
                                         <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
                                     </div>
@@ -130,7 +133,7 @@
                                 <td>2000</td>
                                 <td>28 dec 2020</td>
                                 <td>
-                                    <div class="flex justify-between">
+                                    <div class="flex justify-between md:justify-around">
                                         <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
                                         <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
                                     </div>
@@ -141,7 +144,7 @@
                                 <td>2000</td>
                                 <td>28 dec 2020</td>
                                 <td>
-                                    <div class="flex justify-between">
+                                    <div class="flex justify-between md:justify-around">
                                         <a href="" class="p-1 bg-green-600 text-white"><i class="fas fa-edit "></i></a>
                                         <a href="" class="p-1 bg-red-600 text-white"><i class="fas fa-trash "></i></a>
                                     </div>
@@ -157,7 +160,7 @@
                         </tbody>
                     </table>
                     <div class="text-center my-5">
-                        <div class="flex text-blue-600">
+                        <div class="flex justify-center text-blue-600">
                             <div class="border p-1">suivant</div>
                             <div class="w-10 h-10 border">1</div>
                             <div class="w-10 h-10 border">2</div>
