@@ -49,5 +49,4 @@ window.addEventListener("load",() =>{
     menu.addEventListener("click",toggleMenu);
     depotbtn.addEventListener("click",addModal);
     closeModal.addEventListener("click",removeModal)
-    modal.addEventListener("click",removeModal)
 })
